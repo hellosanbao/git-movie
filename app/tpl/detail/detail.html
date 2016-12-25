@@ -1,0 +1,12 @@
+<div ng-show="!loading" style="padding-bottom: 1.5rem">
+    <div class="inf-pic img-box-x"><img ng-src="{{data.images.large}}" alt=""></div>
+    <div class="inf-mes">
+        <h3 class="inf-name" ng-bind="data.title"></h3>
+        <p><em>地区</em>：<span ng-bind="data.countries.join(' 、')"></span></p>
+        <p><em>类型</em>：<span ng-bind="data.genres.join(' 、')"></span></p>
+        <p><em>演员</em>：<span ng-repeat="cast in data.casts">{{cast.name}} <span ng-if="!$last"> 、</span></span></p>
+        <p><em>评分</em>：<span ng-bind="data.rating.average"></span></p>
+        <p><em>剧情介绍</em>：<span ng-bind="data.summary"></span></p>
+    </div>
+</div>
+<div class="loading" ng-if='loading'><img src="src/images/loading3.gif" alt=""></div>

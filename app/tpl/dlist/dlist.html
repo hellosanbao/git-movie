@@ -1,0 +1,15 @@
+
+<div class="item-list" ng-show='data.subjects.length'>
+    <h2 class="title"><span ng-bind="data.title"></span><span ng-bind="data.total"></span></h2>
+    <ul>
+        <li class="item pr" ng-repeat="item in data.subjects">
+            <a href="#!/subject/{{item.id}}">
+                <img ng-src="{{item.images.large}}" alt="">
+                <div class="tip pa">
+                    <h3 ng-bind="item.title"></h3>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="loading" ng-if='!data.subjects.length'><img src="src/images/loading3.gif" alt=""></div>

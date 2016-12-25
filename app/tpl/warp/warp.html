@@ -1,0 +1,65 @@
+<div class="banner img-box-x"><img src="src/images/banner1.jpg" alt=""></div>
+<div class="check-group">
+    <ul>
+        <li>
+            <a href="#!/coming_soon" style="background-color:#db4653"><img src="src/images/tv.png" alt="" class="icon"><span>即将上映</span></a>
+        </li>
+        <li>
+            <a href="#!/in_theaters" style="background-color:#f5bd42"><img src="src/images/hot.png" alt="" class="icon"><span>正在热映</span></a>
+        </li>
+        <li>
+            <a href="#!/top250" style="background-color:#47d0ad"><img src="src/images/top.png" alt="" class="icon"><span>top250</span></a>
+        </li>
+        <li>
+            <a href="#!/weekly" style="background-color:#e9583e"><img src="src/images/good.png" alt="" class="icon"><span>口碑榜</span></a>
+        </li>
+        <li>
+            <a href="#!/us_box" style="background-color:#8cc250"><img src="src/images/bm.png" alt="" class="icon"><span>北美票房榜</span></a>
+        </li>
+        <li>
+            <a href="#!/new_movies" style="background-color:#3bafd9"><img src="src/images/new.png" alt="" class="icon"><span>新片榜</span></a>
+        </li>
+    </ul>
+</div>
+<div class="item-list">
+    <h2 class="title"><span>正在热映</span> <a href="#!in_theaters" class="more"><img src="src/images/more.png" alt=""></a></h2>
+    <ul>
+        <li class="item pr" ng-repeat="item in in_theaters">
+            <a href="#!/subject/{{item.id}}">
+                <img ng-src="{{item.images.large}}" alt="">
+                <div class="tip pa">
+                    <h3 ng-bind="item.title"></h3>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="loading" ng-if='!in_theaters.length'><img src="src/images/loading3.gif" alt=""></div>
+</div>
+<div class="item-list">
+    <h2 class="title"><span>即将上映</span> <a href="#!/coming_soon" class="more"><img src="src/images/more.png" alt=""></a></h2>
+    <ul>
+        <li class="item pr" ng-repeat="item in coming_soon">
+            <a href="#!/subject/{{item.id}}">
+                <img ng-src="{{item.images.large}}" alt="">
+                <div class="tip pa">
+                    <h3 ng-bind="item.title"></h3>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="loading" ng-if='!coming_soon.length'><img src="src/images/loading3.gif" alt=""></div>
+</div>
+<div class="item-list">
+    <h2 class="title"><span>top250</span> <a href="#!/top250" class="more"><img src="src/images/more.png" alt=""></a></h2>
+    <ul>
+        <li class="item pr" ng-repeat="item in top250">
+            <a href="#!/subject/{{item.id}}">
+                <img ng-src="{{item.images.large}}" alt="">
+                <div class="tip pa">
+                    <h3 ng-bind="item.title"></h3>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="loading" ng-if='!coming_soon.length'><img src="src/images/loading3.gif" alt=""></div>
+</div>

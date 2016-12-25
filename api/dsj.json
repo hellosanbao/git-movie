@@ -1,0 +1,30 @@
+{
+    "count": 20,
+    "start": 0,
+    "total": 22,
+    "subjects": [{
+            "average": 5.4,
+            "genres": [
+                "剧情",
+                "动作",
+                "奇幻"
+            ],
+            "title": "长城",
+            "casts": [
+            	"马特·达蒙",
+            	"刘德华",
+            	"张学友"
+       		],
+            "play_count": 89814,
+            "subtype": "tv",
+            "directors": [
+                "张艺谋",
+                "冯小刚"
+            ],
+            "year": "2016",
+            "images": "https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2394573821.jpg",
+            "movie_url": "https://movie.douban.com/subject/6982558/",
+            "id": "6982558"
+        }],
+        "title": "电视剧"
+    }

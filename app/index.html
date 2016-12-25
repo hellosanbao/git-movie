@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/lib/jquery.js"></script>
+	<script src="src/js/lib/angular.js"></script>
+	<script src="src/js/lib/angular-ui-router.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="mainController">
+    <div id="warp">
+        <div class="header">
+			<a href="#!/warp" class="logo img-box-x"><img src="src/images/logo.png" alt="" class="vm"></a>
+			<form ng-submit="search()">
+				<div class="input-group">
+					<input type="text" placeholder="请输入关键字" ng-model="seatext">
+					<button type="submit">search</button>
+				</div>
+			</form>
+			<div class="dow-btn" ng-click="changedow()"></div>
+			<div class="nav-dow-wap" ng-class="{active:showdow}">
+				<ul class="nav-dow pr" ng-class="{active:showdow}">
+					<li class="close img-box-x"><img src="src/images/close.png" alt=""  ng-click="changedow()"></li>
+					<li><a href="#"><img src="src/images/tushu.png" alt="" class="icon"><span>图书</span></a></li>
+					<li><a href="#"><img src="src/images/dianyin.png" alt="" class="icon"><span>电影</span></a></li>
+					<li><a href="#"><img src="src/images/yinyue.png" alt="" class="icon"><span>音乐</span></a></li>
+					<li><a href="#"><img src="src/images/tupian.png" alt="" class="icon"><span>相册</span></a></li>
+					<li><a href="#"><img src="src/images/huodong.png" alt="" class="icon"><span>同城</span></a></li>
+				</ul>
+			</div>
+        </div>
+        <div ui-view></div>
+    </div>
+</body>
+<script src="src/js/app.js"></script>
+<script src="service/jsonp.js"></script>
+<script src="route/routeConf.js"></script>
+<script src="tpl/warp/warpController.js"></script>
+<script src="tpl/dlist/dlistController.js"></script>
+<script src="tpl/detail/detailController.js"></script>
+<script>
+var wrapWidth = document.getElementById("warp").clientWidth;
+var html = document.getElementsByTagName("html")[0];
+html.style.fontSize = 14 * wrapWidth / 320 + "px";
+window.onresize = function() {
+    wrapWidth = document.getElementById("warp").clientWidth;
+    html.style.fontSize = 14 * wrapWidth / 320 + "px";
+};
+</script>
+
+</html>
