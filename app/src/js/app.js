@@ -25,9 +25,10 @@
                     $scope.showdow = $scope.showdow ? false : true;
                 }
                 $scope.search = function() {
-                	window.location=window.location.origin+"#!/search?q="+$scope.seatext;
+                	window.location=window.location.origin+window.location.pathname+"#!/search?q="+$scope.seatext;
                 	$rootScope.seatext=$scope.seatext;
                 }
+
             }
         ])
 })(angular)

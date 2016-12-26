@@ -12,7 +12,6 @@
                     $scope.loading=false
                     $scope.$apply();
                 })
-
             }
         ])
 })(angular)
